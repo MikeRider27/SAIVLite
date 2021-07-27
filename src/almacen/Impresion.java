@@ -57,7 +57,7 @@ public class Impresion extends javax.swing.JDialog {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        verDetalle(comboCategorias.getSelectedItem().toString());
+                        verDetalle(inventario.getSelectedItem().toString());
                     }
                 }).start();
             }
@@ -88,7 +88,7 @@ public class Impresion extends javax.swing.JDialog {
         rSPanelShadow1 = new rojeru_san.rspanel.RSPanelShadow();
         pnlSlider = new rojeru_san.rspanel.RSPanelsSlider();
         pnlPrint = new javax.swing.JPanel();
-        comboCategorias = new rojerusan.RSComboMetro();
+        inventario = new rojerusan.RSComboMetro();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -111,16 +111,15 @@ public class Impresion extends javax.swing.JDialog {
         pnlPrint.setBackground(new java.awt.Color(255, 255, 255));
         pnlPrint.setName("pnlPrint"); // NOI18N
 
-        comboCategorias.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Imprimir todo" }));
-        comboCategorias.setToolTipText("Categoría");
-        comboCategorias.setColorArrow(new java.awt.Color(69, 87, 252));
-        comboCategorias.setColorBorde(new java.awt.Color(255, 255, 255));
-        comboCategorias.setColorFondo(new java.awt.Color(69, 87, 252));
-        comboCategorias.setColorSeleccion(new java.awt.Color(69, 87, 252));
-        comboCategorias.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        comboCategorias.addActionListener(new java.awt.event.ActionListener() {
+        inventario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Imprimir todo" }));
+        inventario.setToolTipText("Categoría");
+        inventario.setColorArrow(new java.awt.Color(69, 87, 252));
+        inventario.setColorBorde(new java.awt.Color(255, 255, 255));
+        inventario.setColorFondo(new java.awt.Color(69, 87, 252));
+        inventario.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        inventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboCategoriasActionPerformed(evt);
+                inventarioActionPerformed(evt);
             }
         });
 
@@ -205,7 +204,7 @@ public class Impresion extends javax.swing.JDialog {
                 .addGroup(pnlPrintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(comboCategorias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(inventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(pnlPrintLayout.createSequentialGroup()
                 .addGap(147, 147, 147)
@@ -221,7 +220,7 @@ public class Impresion extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
-                .addComponent(comboCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inventario, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85))
@@ -290,16 +289,16 @@ public class Impresion extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void comboCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboCategoriasActionPerformed
+    private void inventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comboCategoriasActionPerformed
+    }//GEN-LAST:event_inventarioActionPerformed
 
     private void btnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintActionPerformed
        this.pnlSlider.setPanelSlider(1, pnlCargando, RSPanelsSlider.DIRECT.RIGHT);
         new Thread(new Runnable() {
             @Override
             public void run() {
-                verDetalle(comboCategorias.getSelectedItem().toString());
+                verDetalle(inventario.getSelectedItem().toString());
             }
         }).start();
     }//GEN-LAST:event_btnPrintActionPerformed
@@ -354,7 +353,7 @@ public class Impresion extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.RSButtonRiple btnCerrar;
     public static rojeru_san.RSButtonRiple btnPrint;
-    public static rojerusan.RSComboMetro comboCategorias;
+    public static rojerusan.RSComboMetro inventario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

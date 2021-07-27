@@ -708,7 +708,7 @@ public class Operaciones {
     // LISTAR CAJEROS EN COMBOBOX
     //-----------------------------------------------------------------------------------
     public static void getCajeros() {
-        DefaultComboBoxModel modelo = (DefaultComboBoxModel) ventas.Impresion.comboCajeros.getModel();
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) ventas.Impresion.Cajeros.getModel();
         modelo.removeAllElements();
         modelo.addElement("IMPRIMIR TODO");
 

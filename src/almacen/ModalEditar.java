@@ -131,7 +131,6 @@ public class ModalEditar extends javax.swing.JDialog {
         txtUbicacion = new rojeru_san.rsfield.RSTextMaterial();
         btnGuardar = new rojeru_san.RSButtonRiple();
         rSPanelImage1 = new rojeru_san.rspanel.RSPanelImage();
-        checkUtiliza = new usuarios.RSCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -204,7 +203,6 @@ public class ModalEditar extends javax.swing.JDialog {
         comboCantidades.setColorArrow(new java.awt.Color(69, 87, 252));
         comboCantidades.setColorBorde(new java.awt.Color(255, 255, 255));
         comboCantidades.setColorFondo(new java.awt.Color(69, 87, 252));
-        comboCantidades.setColorSeleccion(new java.awt.Color(69, 87, 252));
         comboCantidades.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/almacen/label-ubicacion.png"))); // NOI18N
@@ -219,7 +217,6 @@ public class ModalEditar extends javax.swing.JDialog {
         comboCategorias.setColorArrow(new java.awt.Color(69, 87, 252));
         comboCategorias.setColorBorde(new java.awt.Color(255, 255, 255));
         comboCategorias.setColorFondo(new java.awt.Color(69, 87, 252));
-        comboCategorias.setColorSeleccion(new java.awt.Color(69, 87, 252));
         comboCategorias.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/almacen/label-categoria.png"))); // NOI18N
@@ -309,16 +306,6 @@ public class ModalEditar extends javax.swing.JDialog {
             .addGap(0, 328, Short.MAX_VALUE)
         );
 
-        checkUtiliza.setForeground(new java.awt.Color(114, 114, 114));
-        checkUtiliza.setSelected(true);
-        checkUtiliza.setText("Este producto SI utiliza existencias para el inventario.");
-        checkUtiliza.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        checkUtiliza.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkUtilizaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -372,8 +359,7 @@ public class ModalEditar extends javax.swing.JDialog {
                                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txtMas, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))
-                                    .addComponent(txtStockMin, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(checkUtiliza, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtStockMin, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -406,9 +392,7 @@ public class ModalEditar extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(checkUtiliza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(78, 78, 78)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtStockMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -492,7 +476,7 @@ public class ModalEditar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void checkUtilizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkUtilizaActionPerformed
-        if (!checkUtiliza.isSelected()) {
+       /* if (!checkUtiliza.isSelected()) {
             txtExistencias.setEditable(false);
             txtStockMin.setEditable(false);
             txtMas.setEditable(false);
@@ -504,7 +488,7 @@ public class ModalEditar extends javax.swing.JDialog {
             txtExistencias.setEditable(true);
             txtStockMin.setEditable(true);
             txtMas.setEditable(true);
-        }
+        }*/
     }//GEN-LAST:event_checkUtilizaActionPerformed
 
     /**
@@ -615,7 +599,6 @@ public class ModalEditar extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.RSButtonRiple btnCerrar;
     public static rojeru_san.RSButtonRiple btnGuardar;
-    public static usuarios.RSCheckBox checkUtiliza;
     public static rojerusan.RSComboMetro comboCantidades;
     public static rojerusan.RSComboMetro comboCategorias;
     private javax.swing.JLabel jLabel1;
@@ -653,7 +636,7 @@ public class ModalEditar extends javax.swing.JDialog {
         s.setPrecio(Double.parseDouble(this.txtPrecio.getText()));
         s.setPrecio_venta(Double.parseDouble(this.txtPrecioVenta.getText()));
 
-        if (this.checkUtiliza.isSelected()) {
+       /*if (this.checkUtiliza.isSelected()) {
             if (this.txtStockMin.getText().isEmpty()) {
                 s.setStock_min(0);
             } else {
@@ -683,7 +666,7 @@ public class ModalEditar extends javax.swing.JDialog {
             if (this.txtExistencias.getText().isEmpty()) {
                 s.setExistencias(0);
             }
-        }
+        }*/
 
         if (this.comboCantidades.getSelectedIndex() == 0) {
             s.setSe_venden_en("");
@@ -692,7 +675,7 @@ public class ModalEditar extends javax.swing.JDialog {
         }
         s.setUbicacion(this.txtUbicacion.getText());
 
-        s.setInventario_utiliza(this.checkUtiliza.isSelected());
+//        s.setInventario_utiliza(this.checkUtiliza.isSelected());
         s.setId(this.id);
 
         if (Operaciones.isEditado(s)) {

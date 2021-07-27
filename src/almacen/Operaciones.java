@@ -409,7 +409,7 @@ public class Operaciones {
                     datos.comboCantidades.setSelectedItem(rs.getString(9));
                 }
                 datos.txtUbicacion.setText(rs.getString(10));
-                datos.checkUtiliza.setSelected(rs.getBoolean(11));
+//                datos.checkUtiliza.setSelected(rs.getBoolean(11));
                 datos.codigoTemp = rs.getString(3);
             }
         } catch (SQLException ex) {
@@ -449,7 +449,7 @@ public class Operaciones {
             modelo.addElement("-Sin categoría-");
         }
         if (accion.equals("imprimir")) {
-            modelo = (DefaultComboBoxModel) Impresion.comboCategorias.getModel();
+            modelo = (DefaultComboBoxModel) Impresion.inventario.getModel();
             modelo.removeAllElements();
             modelo.addElement("IMPRIMIR TODO");
             modelo.addElement("-Sin categoría-");

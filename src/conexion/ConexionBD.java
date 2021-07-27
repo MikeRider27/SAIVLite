@@ -15,9 +15,8 @@ public class ConexionBD {
     public void conexion() {
 
         try {
-            Class.forName("org.firebirdsql.jdbc.FBDriver");
-            conect = DriverManager.getConnection("jdbc:firebirdsql:embedded:./bd/PUNTO_VENTAS.FDB",
-                    "roger", "roger");
+            Class.forName("org.postgresql.Driver");
+            conect = DriverManager.getConnection("jdbc:postgresql://localhost:5432/punto_venta","postgres","dgtic123");
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(ConexionBD.class.getName()).log(Level.SEVERE, null, ex);
         }

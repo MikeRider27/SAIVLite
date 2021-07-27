@@ -147,7 +147,6 @@ public class ModalRegistrar extends javax.swing.JDialog {
         txtExistencias = new rojeru_san.rsfield.RSTextMaterial();
         txtUbicacion = new rojeru_san.rsfield.RSTextMaterial();
         rSPanelImage1 = new rojeru_san.rspanel.RSPanelImage();
-        checkUtiliza = new usuarios.RSCheckBox();
         btnRegistrar = new rojeru_san.RSButtonRiple();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -221,7 +220,6 @@ public class ModalRegistrar extends javax.swing.JDialog {
         comboCantidades.setColorArrow(new java.awt.Color(69, 87, 252));
         comboCantidades.setColorBorde(new java.awt.Color(255, 255, 255));
         comboCantidades.setColorFondo(new java.awt.Color(69, 87, 252));
-        comboCantidades.setColorSeleccion(new java.awt.Color(69, 87, 252));
         comboCantidades.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/almacen/label-ubicacion.png"))); // NOI18N
@@ -231,7 +229,6 @@ public class ModalRegistrar extends javax.swing.JDialog {
         comboCategorias.setColorArrow(new java.awt.Color(69, 87, 252));
         comboCategorias.setColorBorde(new java.awt.Color(255, 255, 255));
         comboCategorias.setColorFondo(new java.awt.Color(69, 87, 252));
-        comboCategorias.setColorSeleccion(new java.awt.Color(69, 87, 252));
         comboCategorias.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/almacen/label-categoria.png"))); // NOI18N
@@ -301,16 +298,6 @@ public class ModalRegistrar extends javax.swing.JDialog {
             .addGap(0, 328, Short.MAX_VALUE)
         );
 
-        checkUtiliza.setForeground(new java.awt.Color(114, 114, 114));
-        checkUtiliza.setSelected(true);
-        checkUtiliza.setText("Este producto SI utiliza existencias para el inventario.");
-        checkUtiliza.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        checkUtiliza.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkUtilizaActionPerformed(evt);
-            }
-        });
-
         btnRegistrar.setBackground(new java.awt.Color(69, 87, 252));
         btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/almacen/btn-registrar.png"))); // NOI18N
         btnRegistrar.setText("Registar");
@@ -355,27 +342,24 @@ public class ModalRegistrar extends javax.swing.JDialog {
                         .addGap(27, 27, 27)
                         .addComponent(rSPanelImage1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(checkUtiliza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(comboCantidades, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtStockMin, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtExistencias, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(comboCantidades, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtStockMin, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtExistencias, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -388,8 +372,6 @@ public class ModalRegistrar extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(checkUtiliza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtStockMin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -502,7 +484,7 @@ public class ModalRegistrar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void checkUtilizaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkUtilizaActionPerformed
-        if (!checkUtiliza.isSelected()) {
+       /* if (!checkUtiliza.isSelected()) {
             txtExistencias.setEditable(false);
             txtStockMin.setEditable(false);
 
@@ -511,7 +493,7 @@ public class ModalRegistrar extends javax.swing.JDialog {
         } else {
             txtExistencias.setEditable(true);
             txtStockMin.setEditable(true);
-        }
+        }*/
     }//GEN-LAST:event_checkUtilizaActionPerformed
 
     /**
@@ -574,7 +556,6 @@ public class ModalRegistrar extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.RSButtonRiple btnCerrar;
     public static rojeru_san.RSButtonRiple btnRegistrar;
-    private usuarios.RSCheckBox checkUtiliza;
     private rojerusan.RSComboMetro comboCantidades;
     public static rojerusan.RSComboMetro comboCategorias;
     private javax.swing.JLabel jLabel1;
@@ -611,7 +592,7 @@ public class ModalRegistrar extends javax.swing.JDialog {
         s.setPrecio(Double.parseDouble(this.txtPrecio.getText()));
         s.setPrecio_venta(Double.parseDouble(this.txtPrecioVenta.getText()));
 
-        if (this.checkUtiliza.isSelected()) {
+       /* if (this.checkUtiliza.isSelected()) {
             if (this.txtStockMin.getText().isEmpty()) {
                 s.setStock_min(0);
             } else {
@@ -629,7 +610,7 @@ public class ModalRegistrar extends javax.swing.JDialog {
             if (this.txtExistencias.getText().isEmpty()) {
                 s.setExistencias(0);
             }
-        }
+        }*/
 
         if (this.comboCantidades.getSelectedIndex() == 0) {
             s.setSe_venden_en("");
@@ -638,7 +619,7 @@ public class ModalRegistrar extends javax.swing.JDialog {
         }
         s.setUbicacion(this.txtUbicacion.getText());
 
-        s.setInventario_utiliza(this.checkUtiliza.isSelected());
+      //  s.setInventario_utiliza(this.checkUtiliza.isSelected());
 
         if (Operaciones.isRegistrado(s)) {
             return true;

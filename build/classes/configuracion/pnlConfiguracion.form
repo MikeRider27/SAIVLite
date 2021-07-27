@@ -354,7 +354,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="listaImpresoras" alignment="0" min="-2" pref="342" max="-2" attributes="0"/>
+                      <Component id="Impresoras" alignment="0" min="-2" pref="342" max="-2" attributes="0"/>
                       <Component id="btnPrint" alignment="0" min="-2" pref="342" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="249" max="32767" attributes="0"/>
@@ -370,7 +370,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="listaImpresoras" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="Impresoras" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnPrint" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -385,7 +385,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="rojerusan.RSComboMetro" name="listaImpresoras">
+        <Component class="rojerusan.RSComboMetro" name="Impresoras">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="1">
@@ -402,15 +402,12 @@
             <Property name="colorFondo" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fc" green="57" red="45" type="rgb"/>
             </Property>
-            <Property name="colorSeleccion" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="fc" green="57" red="45" type="rgb"/>
-            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="14" style="1"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listaImpresorasActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ImpresorasActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>

@@ -114,14 +114,13 @@ public class Login extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(21, 21, 28));
+        jPanel3.setBackground(new java.awt.Color(69, 87, 252));
 
         jLabel3.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("¡BIENVENIDO!");
 
-        jLabel7.setBackground(new java.awt.Color(11, 7, 7));
         jLabel7.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -185,7 +184,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnIngresar.setBackground(new java.awt.Color(4, 5, 13));
+        btnIngresar.setBackground(new java.awt.Color(69, 87, 252));
         btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login/btn-entrar.png"))); // NOI18N
         btnIngresar.setText("Ingresar");
         btnIngresar.setColorHover(new java.awt.Color(173, 187, 194));
@@ -202,12 +201,14 @@ public class Login extends javax.swing.JFrame {
         lblMensaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMensaje.setOpaque(true);
 
+        txtUser.setBackground(new java.awt.Color(255, 255, 255));
         txtUser.setForeground(new java.awt.Color(171, 179, 182));
         txtUser.setColorMaterial(new java.awt.Color(69, 87, 252));
         txtUser.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         txtUser.setPlaceholder("Ingresa tú usuario...");
         txtUser.setSelectionColor(new java.awt.Color(220, 23, 111));
 
+        txtPass.setBackground(new java.awt.Color(255, 255, 255));
         txtPass.setForeground(new java.awt.Color(171, 179, 182));
         txtPass.setColorMaterial(new java.awt.Color(69, 87, 252));
         txtPass.setPlaceholder("Ingresa tú contraseña...");
@@ -220,7 +221,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(93, 97, 92));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login/label-contraseña.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login/label-pass.png"))); // NOI18N
         jLabel4.setText("Contraseña");
 
         jLabel5.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
