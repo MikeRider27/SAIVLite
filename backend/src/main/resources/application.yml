@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+
+spring:
+  application:
+    name: saiv
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/saiv}
+    username: ${DB_USER:saiv}
+    password: ${DB_PASSWORD:saiv}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  jackson:
+    time-zone: ${TZ:America/Asuncion}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+saiv:
+  jwt:
+    secret: ${JWT_SECRET:cambia-este-secreto-por-uno-largo-de-al-menos-32-bytes!!}
+    expiration-hours: ${JWT_EXPIRATION_HOURS:12}
+  admin:
+    username: ${ADMIN_USERNAME:admin}
+    password: ${ADMIN_PASSWORD:admin123}
