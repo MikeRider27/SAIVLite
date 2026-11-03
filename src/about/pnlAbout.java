@@ -27,14 +27,14 @@ public class pnlAbout extends javax.swing.JPanel {
     }
     
     public static void verificaLicencia(){
-        if (Verificar.existePrueva()) {
+       /* if (Verificar.existePrueva()) {
             lblLicencia.setForeground(new Color(243,66,53));
             lblLicencia.setText("Producto de prueba...");
         }else{
             String licencia = MD5.getDesencriptar(Verificar.getLicencia());
             lblLicencia.setForeground(new Color(0,204,102));
             lblLicencia.setText(licencia.toString().substring(0, 14)+"...");
-        }
+        }*/
     }
 
     /**

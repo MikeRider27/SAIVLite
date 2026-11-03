@@ -33,17 +33,17 @@ public class pnlConfiguracion extends javax.swing.JPanel {
         PrintService service = PrintServiceLookup.lookupDefaultPrintService();
         if (service != null) {
             String printServiceName = service.getName();
-            listaImpresoras.setSelectedItem(printServiceName);
+            Impresoras.setSelectedItem(printServiceName);
             lblImpresora.setText(printServiceName);
         } else {
-            listaImpresoras.setSelectedItem("NO SE HA ESTABLECIDO UNA IMPRESORA PREDETERMINADA");
+            Impresoras.setSelectedItem("NO SE HA ESTABLECIDO UNA IMPRESORA PREDETERMINADA");
         }
     }
 
     private void listarImpresoras() {
         PrintService[] ps = PrintServiceLookup.lookupPrintServices(null, null);
         for (PrintService p : ps) {
-            listaImpresoras.addItem(p.getName());
+            Impresoras.addItem(p.getName());
         }
     }
 
@@ -97,7 +97,7 @@ public class pnlConfiguracion extends javax.swing.JPanel {
         jLabel61 = new javax.swing.JLabel();
         btnReiniciar = new rojeru_san.rsbutton.RSButtonMetro();
         jPanel5 = new javax.swing.JPanel();
-        listaImpresoras = new rojerusan.RSComboMetro();
+        Impresoras = new rojerusan.RSComboMetro();
         btnPrint = new rojeru_san.rsbutton.RSButtonRoundEffect();
         lblTexto = new javax.swing.JLabel();
         lblImpresora = new javax.swing.JLabel();
@@ -280,16 +280,15 @@ public class pnlConfiguracion extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Impresoras", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Roboto", 1, 14), new java.awt.Color(51, 51, 51))); // NOI18N
 
-        listaImpresoras.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccionar Impresora" }));
-        listaImpresoras.setToolTipText("Categoría");
-        listaImpresoras.setColorArrow(new java.awt.Color(69, 87, 252));
-        listaImpresoras.setColorBorde(new java.awt.Color(255, 255, 255));
-        listaImpresoras.setColorFondo(new java.awt.Color(69, 87, 252));
-        listaImpresoras.setColorSeleccion(new java.awt.Color(69, 87, 252));
-        listaImpresoras.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        listaImpresoras.addActionListener(new java.awt.event.ActionListener() {
+        Impresoras.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccionar Impresora" }));
+        Impresoras.setToolTipText("Categoría");
+        Impresoras.setColorArrow(new java.awt.Color(69, 87, 252));
+        Impresoras.setColorBorde(new java.awt.Color(255, 255, 255));
+        Impresoras.setColorFondo(new java.awt.Color(69, 87, 252));
+        Impresoras.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        Impresoras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listaImpresorasActionPerformed(evt);
+                ImpresorasActionPerformed(evt);
             }
         });
 
@@ -320,7 +319,7 @@ public class pnlConfiguracion extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(listaImpresoras, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Impresoras, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 249, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,7 +331,7 @@ public class pnlConfiguracion extends javax.swing.JPanel {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(listaImpresoras, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Impresoras, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -575,12 +574,12 @@ public class pnlConfiguracion extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnRestoreActionPerformed
 
-    private void listaImpresorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaImpresorasActionPerformed
+    private void ImpresorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImpresorasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_listaImpresorasActionPerformed
+    }//GEN-LAST:event_ImpresorasActionPerformed
 
     private void btnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintActionPerformed
-        estableceImpresoraPredeterminada(listaImpresoras.getSelectedItem().toString());
+        estableceImpresoraPredeterminada(Impresoras.getSelectedItem().toString());
         seleccionarImpresoraPredeterminada();
     }//GEN-LAST:event_btnPrintActionPerformed
 
@@ -626,6 +625,7 @@ public class pnlConfiguracion extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static rojerusan.RSComboMetro Impresoras;
     private rojeru_san.rsbutton.RSButtonMetro btnBackup;
     private rojeru_san.rsbutton.RSButtonMetro btnPass;
     private rojeru_san.rsbutton.RSButtonRoundEffect btnPrint;
@@ -659,7 +659,6 @@ public class pnlConfiguracion extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel lblImpresora;
     private javax.swing.JLabel lblTexto;
-    public static rojerusan.RSComboMetro listaImpresoras;
     // End of variables declaration//GEN-END:variables
 
     private void GeneraBackup() {

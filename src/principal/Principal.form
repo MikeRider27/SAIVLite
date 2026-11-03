@@ -109,58 +109,6 @@
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
-          <SubComponents>
-            <Component class="principal.pnlVentasPrincipal" name="pnlVentasPrincipal1">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="pnlVentasPrincipal1" noResource="true"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card5"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="almacen.pnlAlmacen" name="pnlAlmacen1">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="pnlAlmacen1" noResource="true"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card3"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="usuarios.pnlUsuarios" name="pnlUsuarios1">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="pnlUsuarios1" noResource="true"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card4"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="configuracion.pnlConfiguracion" name="pnlConfiguracion1">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="pnlConfiguracion1" noResource="true"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card5"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="about.pnlAbout" name="pnlAbout1">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="pnlAbout1" noResource="true"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-                  <CardConstraints cardName="card6"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-          </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="lblUsuario">
           <Properties>

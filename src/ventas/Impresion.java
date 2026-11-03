@@ -62,7 +62,7 @@ public class Impresion extends javax.swing.JDialog {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        verDetalle(comboCajeros.getSelectedItem().toString(), lblFecha.getText());
+                        verDetalle(Cajeros.getSelectedItem().toString(), lblFecha.getText());
                     }
                 }).start();
             }
@@ -93,7 +93,7 @@ public class Impresion extends javax.swing.JDialog {
         rSPanelShadow1 = new rojeru_san.rspanel.RSPanelShadow();
         pnlSlider = new rojeru_san.rspanel.RSPanelsSlider();
         pnlPrint = new javax.swing.JPanel();
-        comboCajeros = new rojerusan.RSComboMetro();
+        Cajeros = new rojerusan.RSComboMetro();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lblFecha = new javax.swing.JLabel();
@@ -115,13 +115,12 @@ public class Impresion extends javax.swing.JDialog {
         pnlPrint.setBackground(new java.awt.Color(255, 255, 255));
         pnlPrint.setName("pnlPrint"); // NOI18N
 
-        comboCajeros.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Imprimir" }));
-        comboCajeros.setToolTipText("Categoría");
-        comboCajeros.setColorArrow(new java.awt.Color(69, 87, 252));
-        comboCajeros.setColorBorde(new java.awt.Color(255, 255, 255));
-        comboCajeros.setColorFondo(new java.awt.Color(69, 87, 252));
-        comboCajeros.setColorSeleccion(new java.awt.Color(69, 87, 252));
-        comboCajeros.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        Cajeros.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Imprimir" }));
+        Cajeros.setToolTipText("Categoría");
+        Cajeros.setColorArrow(new java.awt.Color(69, 87, 252));
+        Cajeros.setColorBorde(new java.awt.Color(255, 255, 255));
+        Cajeros.setColorFondo(new java.awt.Color(69, 87, 252));
+        Cajeros.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(93, 97, 92));
@@ -202,7 +201,7 @@ public class Impresion extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(pnlPrintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(comboCajeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Cajeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -221,7 +220,7 @@ public class Impresion extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(35, 35, 35)
-                .addComponent(comboCajeros, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Cajeros, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblFecha)
                 .addGap(31, 31, 31)
@@ -297,7 +296,7 @@ public class Impresion extends javax.swing.JDialog {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                verDetalle(comboCajeros.getSelectedItem().toString(), lblFecha.getText());
+                verDetalle(Cajeros.getSelectedItem().toString(), lblFecha.getText());
             }
         }).start();
     }//GEN-LAST:event_btnPrintActionPerformed
@@ -352,9 +351,9 @@ public class Impresion extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static rojerusan.RSComboMetro Cajeros;
     private rojeru_san.RSButtonRiple btnCerrar;
     public static rojeru_san.RSButtonRiple btnPrint;
-    public static rojerusan.RSComboMetro comboCajeros;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

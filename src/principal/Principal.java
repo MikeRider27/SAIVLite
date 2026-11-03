@@ -7,6 +7,7 @@ package principal;
 
 import about.pnlAbout;
 import alertas.WarningAlert;
+import almacen.pnlAlmacen;
 import configuracion.pnlConfiguracion;
 import static java.awt.Frame.ICONIFIED;
 import java.util.logging.Level;
@@ -41,7 +42,7 @@ public class Principal extends javax.swing.JFrame {
         
         this.lblID.setVisible(false);
         
-        verificaLicencia();
+     //   verificaLicencia();
         
         setToolTip();
         
@@ -57,7 +58,7 @@ public class Principal extends javax.swing.JFrame {
             lbl2.setText("");
             btnLicencia.setVisible(false);
             
-            pnlAbout.verificaLicencia();
+//            pnlAbout.verificaLicencia();
         }
     }
     
@@ -72,11 +73,6 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         pnlSlider = new rojeru_san.rspanel.RSPanelsSlider();
-        pnlVentasPrincipal1 = new principal.pnlVentasPrincipal();
-        pnlAlmacen1 = new almacen.pnlAlmacen();
-        pnlUsuarios1 = new usuarios.pnlUsuarios();
-        pnlConfiguracion1 = new configuracion.pnlConfiguracion();
-        pnlAbout1 = new about.pnlAbout();
         lblUsuario = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         lblID = new javax.swing.JLabel();
@@ -102,21 +98,6 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         pnlSlider.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
-
-        pnlVentasPrincipal1.setName("pnlVentasPrincipal1"); // NOI18N
-        pnlSlider.add(pnlVentasPrincipal1, "card5");
-
-        pnlAlmacen1.setName("pnlAlmacen1"); // NOI18N
-        pnlSlider.add(pnlAlmacen1, "card3");
-
-        pnlUsuarios1.setName("pnlUsuarios1"); // NOI18N
-        pnlSlider.add(pnlUsuarios1, "card4");
-
-        pnlConfiguracion1.setName("pnlConfiguracion1"); // NOI18N
-        pnlSlider.add(pnlConfiguracion1, "card5");
-
-        pnlAbout1.setName("pnlAbout1"); // NOI18N
-        pnlSlider.add(pnlAbout1, "card6");
 
         lblUsuario.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(109, 109, 109));
@@ -335,7 +316,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 482, Short.MAX_VALUE)
+                .addComponent(pnlSlider, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -346,7 +327,7 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(lbl1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblDias, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbl2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLicencia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))))
+                        .addComponent(btnLicencia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -376,8 +357,9 @@ public class Principal extends javax.swing.JFrame {
             this.btnUsuarios.setSelected(false);
             this.btnConfiguración.setSelected(false);
             this.btnAbout.setSelected(false);
+            pnlAlmacen pnlAlmacen = new almacen.pnlAlmacen();
 
-            this.pnlSlider.setPanelSlider(1, pnlAlmacen1, RSPanelsSlider.DIRECT.DOWN);
+            this.pnlSlider.setPanelSlider(1, pnlAlmacen, RSPanelsSlider.DIRECT.DOWN);
         }
     }//GEN-LAST:event_btnAlmacenActionPerformed
 
@@ -389,7 +371,7 @@ public class Principal extends javax.swing.JFrame {
             this.btnConfiguración.setSelected(false);
             this.btnAbout.setSelected(false);
 
-            this.pnlSlider.setPanelSlider(1, pnlUsuarios1, RSPanelsSlider.DIRECT.DOWN);
+//            this.pnlSlider.setPanelSlider(1, pnlUsuarios1, RSPanelsSlider.DIRECT.DOWN);
         }
     }//GEN-LAST:event_btnUsuariosActionPerformed
 
@@ -401,7 +383,7 @@ public class Principal extends javax.swing.JFrame {
             this.btnConfiguración.setSelected(true);
             this.btnAbout.setSelected(false);
 
-            this.pnlSlider.setPanelSlider(1, pnlConfiguracion1, RSPanelsSlider.DIRECT.DOWN);
+//            this.pnlSlider.setPanelSlider(1, pnlConfiguracion1, RSPanelsSlider.DIRECT.DOWN);
         }
     }//GEN-LAST:event_btnConfiguraciónActionPerformed
 
@@ -413,7 +395,7 @@ public class Principal extends javax.swing.JFrame {
             this.btnConfiguración.setSelected(false);
             this.btnAbout.setSelected(true);
 
-            this.pnlSlider.setPanelSlider(1, pnlAbout1, RSPanelsSlider.DIRECT.DOWN);
+//            this.pnlSlider.setPanelSlider(1, pnlAbout1, RSPanelsSlider.DIRECT.DOWN);
         }
     }//GEN-LAST:event_btnAboutActionPerformed
 
@@ -425,7 +407,7 @@ public class Principal extends javax.swing.JFrame {
             this.btnConfiguración.setSelected(false);
             this.btnAbout.setSelected(false);
 
-            this.pnlSlider.setPanelSlider(1, pnlVentasPrincipal1, RSPanelsSlider.DIRECT.DOWN);
+//            this.pnlSlider.setPanelSlider(1, pnlVentasPrincipal1, RSPanelsSlider.DIRECT.DOWN);
         }
     }//GEN-LAST:event_btnVentasActionPerformed
 
@@ -518,12 +500,7 @@ public class Principal extends javax.swing.JFrame {
     public static javax.swing.JLabel lblDias;
     public static javax.swing.JLabel lblID;
     public static javax.swing.JLabel lblUsuario;
-    private about.pnlAbout pnlAbout1;
-    private almacen.pnlAlmacen pnlAlmacen1;
-    private configuracion.pnlConfiguracion pnlConfiguracion1;
     private rojeru_san.rspanel.RSPanelsSlider pnlSlider;
-    private usuarios.pnlUsuarios pnlUsuarios1;
-    private principal.pnlVentasPrincipal pnlVentasPrincipal1;
     // End of variables declaration//GEN-END:variables
 
     private void setToolTip() {
